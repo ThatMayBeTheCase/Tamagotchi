@@ -35,8 +35,7 @@ h1 {
 }
 
 .stats {
-    display: flex;
-    justify-content: space-evenly;
+    margin: 10px;
     color: #f5f5f5;
 }
 

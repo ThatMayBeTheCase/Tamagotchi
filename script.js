@@ -22,10 +22,32 @@ function setControlsEnabled(enabled) {
     document.getElementById("sleep").disabled = !enabled;
 }
 
+
+function hungerStatus(value) {
+    if (value > 80) return "Svälter";
+    if (value > 50) return "Hungrig";
+    if (value > 20) return "Mätt";
+    return "Proppmätt";
+}
+
+function energyStatus(value) {
+    if (value < 20) return "Utslagen";
+    if (value < 50) return "Trött";
+    if (value < 80) return "Pigg";
+    return "Full av energi";
+}
+
+function happinessStatus(value) {
+    if (value < 20) return "Olycklig";
+    if (value < 50) return "Nöjd";
+    if (value < 80) return "Glad";
+    return "Extremt lycklig";
+}
+
 function render() {
-    document.getElementById("hunger").textContent = pet.hunger;
-    document.getElementById("energy").textContent = pet.energy;
-    document.getElementById("happiness").textContent = pet.happiness;
+    document.getElementById("hunger").textContent = hungerStatus(pet.hunger);
+    document.getElementById("energy").textContent = energyStatus(pet.energy);
+    document.getElementById("happiness").textContent = happinessStatus(pet.happiness);
 
 // Ändra emoji baserat på medelvärde
 const hungerWellness = 100 - pet.hunger;
