@@ -1,0 +1,68 @@
+
+:root {
+    --bg-color: #121e28;
+    --accent-color: #ff705a;
+    --text-color: #c9d1d9;
+    --muted-text: #8b949e;
+}
+
+body {
+    display: grid;
+    width: 100%;
+    font-family: sans-serif;
+    text-align: center;
+    place-items: center;
+    margin-top: 50px;
+    background-color: #0d161d;
+}
+
+#game {
+    background-color: var(--bg-color);
+    width: 300px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+    color: var(--text-color);
+}
+
+#pet {
+    font-size: 100px;
+    margin: 20px;
+    transition: transform 0.3s;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-evenly;
+    color: #f5f5f5;
+}
+
+button {
+    margin: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: var(--accent-color);
+    color: #ced0d4;
+    padding: 10px 20px;
+    border: 2px solid var(--accent-color);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+button:hover {
+    background-color: #121e28;
+}
+
+.controls button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    filter: grayscale(0.4);
+}
+
+#message {
+    font-weight: bold;
+    color: darkred;
+}
