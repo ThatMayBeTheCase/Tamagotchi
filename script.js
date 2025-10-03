@@ -4,6 +4,8 @@ let pet = {
     energy: 50,
     happiness: 50
 };
+// hälsa
+let health = 5;
 
 let gameLoop = null;
 
